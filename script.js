@@ -51,13 +51,12 @@ function getRandomQuote(array)
 {
   var quoteIndex = 
   Math.floor(Math.random() * (quotes.length));
-  for (var i = 0; i < array.length; i++) 
   {
       var randomQuote = array[quoteIndex];
   }
   return randomQuote;
 }
-console.log(quoteIndex);
+
 
 // /***
 //   Create the `printQuote` function to: 
