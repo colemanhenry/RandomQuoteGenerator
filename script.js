@@ -46,55 +46,61 @@ var quotes = [
    - use the random number to `return` a random quote object from the 
      `quotes` array.
 ***/
+
 function getRandomQuote(array) 
 {
-  var quoteIndex = array [Math.floor(Math.random() * quotes.length)]; 
-  return getRandomQuote;
-},
-
-
-/***
-  Create the `printQuote` function to: 
-   - call the `getRandomQuote` function and assign it to a variable.
-   - use the properties of the quote object stored in the variable to 
-     create your HTML string.
-   - use conditionals to make sure the optional properties exist before 
-     they are added to the HTML string.
-   - set the `innerHTML` of the `quote-box` div to the HTML string. 
-***/
-function printQuote()
-{
-  var random = getRandomQuote(quotes);
+  var quoteIndex = 
+  Math.floor(Math.random() * (quotes.length));
+  for (var i = 0; i < array.length; i++) 
+  {
+      var randomQuote = array[quoteIndex];
+  }
+  return randomQuote;
 }
+console.log(quoteIndex);
+
+// /***
+//   Create the `printQuote` function to: 
+//    - call the `getRandomQuote` function and assign it to a variable.
+//    - use the properties of the quote object stored in the variable to 
+//      create your HTML string.
+//    - use conditionals to make sure the optional properties exist before 
+//      they are added to the HTML string.
+//    - set the `innerHTML` of the `quote-box` div to the HTML string. 
+// ***/
+// function printQuote()
+// {
+//   var random = getRandomQuote(quotes);
+// }
  
-//Changes the background color on quote change
-function changeColour ()
-{
-  var newColor = colors[Math.floor(Math.random() * colors.length)];
-  return newColor
-},
+// //Changes the background color on quote change
+// function changeColour ()
+// {
+//   var newColor = colors[Math.floor(Math.random() * colors.length)];
+//   return newColor
+// },
   
-// Initializing the message variable with empty string
-  var result = getRandomQuote(quotes)
-  message = "<p class='quote'>" + result.quote + "</p>";
-  message += "<p class='source'>" + result.source;
-  message += "<span class='citation'>" + result.citation + "</span>";
-  message += "<span class='year'>" + result.year + "</span>"
-  message += "</p>";
+// // Initializing the message variable with empty string
+//   var result = getRandomQuote(quotes)
+//   message = "<p class='quote'>" + result.quote + "</p>";
+//   message += "<p class='source'>" + result.source;
+//   message += "<span class='citation'>" + result.citation + "</span>";
+//   message += "<span class='year'>" + result.year + "</span>"
+//   message += "</p>";
 
-  document.getElementById('quote-box').innerHTML = message;  
-}
-printQuote();
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
-
-document.getElementById('loadQuote').addEventListener("click",function() { printQuote(quoteLibrary)},false);
+//   document.getElementById('quote-box').innerHTML = message;  
+// }
+// printQuote();
 
 
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
+// /***
+//   When the "Show another quote" button is clicked, the event listener 
+//   below will be triggered, and it will call, or "invoke", the `printQuote` 
+//   function. So do not make any changes to the line of code below this 
+//   comment.
+// ***/
+
+// document.getElementById('loadQuote').addEventListener("click",function() { printQuote(quoteLibrary)},false);
+
+
+// // Remember to delete the comments that came with this file, and replace them with your own code comments.
