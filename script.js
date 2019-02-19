@@ -39,7 +39,7 @@ var quotes = [
   citation: 'Movie',
   year: '1996'
 },
-
+]
 /***
   Create the `getRandomQuote` function to:
    - generate a random number 
@@ -67,10 +67,10 @@ function getRandomQuote(array)
 //      they are added to the HTML string.
 //    - set the `innerHTML` of the `quote-box` div to the HTML string. 
 // ***/
-// function printQuote()
-// {
-//   var random = getRandomQuote(quotes);
-// }
+function printQuote()
+{
+  var random = getRandomQuote(quotes);
+}
  
 // //Changes the background color on quote change
 // function changeColour ()
@@ -80,12 +80,12 @@ function getRandomQuote(array)
 // },
   
 // // Initializing the message variable with empty string
-//   var result = getRandomQuote(quotes)
-//   message = "<p class='quote'>" + result.quote + "</p>";
-//   message += "<p class='source'>" + result.source;
-//   message += "<span class='citation'>" + result.citation + "</span>";
-//   message += "<span class='year'>" + result.year + "</span>"
-//   message += "</p>";
+   var result = getRandomQuote(quotes)
+    message = "<p class='quote'>" + result.quote + "</p>";
+    message += "<p class='source'>" + result.source;
+    message += "<span class='citation'>" + result.citation + "</span>";
+    message += "<span class='year'>" + result.year + "</span>"
+    message += "</p>";
 
 //   document.getElementById('quote-box').innerHTML = message;  
 // }
@@ -100,6 +100,3 @@ function getRandomQuote(array)
 // ***/
 
 // document.getElementById('loadQuote').addEventListener("click",function() { printQuote(quoteLibrary)},false);
-
-
-// // Remember to delete the comments that came with this file, and replace them with your own code comments.
