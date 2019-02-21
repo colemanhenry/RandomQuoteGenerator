@@ -69,6 +69,7 @@ function getRandomQuote(array)
 // ***/
 function printQuote()
 {
+  var quotes;
   var random = getRandomQuote(quotes);
   var message ="";
 
@@ -87,8 +88,9 @@ if( random['year'] )
 };
 message += '</p>';
 
+document.getElementById('quote-box').innerHTML = message;
 }
-    document.getElementById('quote-box').innerHTML = message;  
+      
  
 // printQuote();
 
@@ -100,4 +102,4 @@ message += '</p>';
 //   comment.
 // ***/
 
-// document.getElementById('loadQuote').addEventListener("click",function() { printQuote(quoteLibrary)},false);
+document.getElementById('loadQuote').addEventListener("click",function() { printQuote(quoteLibrary)},false);
