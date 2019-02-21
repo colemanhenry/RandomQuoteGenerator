@@ -70,23 +70,29 @@ function getRandomQuote(array)
 function printQuote()
 {
   var random = getRandomQuote(quotes);
-}
- 
-// //Changes the background color on quote change
-// function changeColour ()
-// {
-//   var newColor = colors[Math.floor(Math.random() * colors.length)];
-//   return newColor
-// },
-  
-// // Initializing the message variable with empty string
-   var result = getRandomQuote(quotes)
+  var message ="";
+
+  if( randomQuote['source'] )
+  {
+    quoteConcate += '<span class="citation">' + randomQuote['source'] + '</span>';    
+};
+  if( randomQuote['citation'] )
+  {
+    quoteConcate += '<span class="citation">' + randomQuote['citation'] + '</span>';    
+};
+
+if( randomQuote['year'] )
+{
+    quoteConcate += '<span class="year">' +randomQuote['year'] + '</span>';
+};
+quoteConcate += '</p>';
+
     message = "<p class='quote'>" + result.quote + "</p>";
     message += "<p class='source'>" + result.source;
     message += "<span class='citation'>" + result.citation + "</span>";
     message += "<span class='year'>" + result.year + "</span>"
     message += "</p>";
-
+}
 //   document.getElementById('quote-box').innerHTML = message;  
 // }
 // printQuote();
