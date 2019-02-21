@@ -72,29 +72,24 @@ function printQuote()
   var random = getRandomQuote(quotes);
   var message ="";
 
-  if( randomQuote['source'] )
+  if( random['source'] )
   {
-    quoteConcate += '<span class="citation">' + randomQuote['source'] + '</span>';    
+    message += '<p class="source">' + random['source'] + '</p>';    
 };
-  if( randomQuote['citation'] )
+  if( random['citation'] )
   {
-    quoteConcate += '<span class="citation">' + randomQuote['citation'] + '</span>';    
+    message += '<p class="citation">' + random['citation'] + '</p>';    
 };
 
-if( randomQuote['year'] )
+if( random['year'] )
 {
-    quoteConcate += '<span class="year">' +randomQuote['year'] + '</span>';
+    message += '<p class="year">' +random['year'] + '</p>';
 };
-quoteConcate += '</p>';
+message += '</p>';
 
-    message = "<p class='quote'>" + result.quote + "</p>";
-    message += "<p class='source'>" + result.source;
-    message += "<span class='citation'>" + result.citation + "</span>";
-    message += "<span class='year'>" + result.year + "</span>"
-    message += "</p>";
 }
-//   document.getElementById('quote-box').innerHTML = message;  
-// }
+    document.getElementById('quote-box').innerHTML = message;  
+ 
 // printQuote();
 
 
