@@ -69,7 +69,7 @@ function getRandomQuote(array)
 // ***/
 function printQuote()
 {
-  var quotes;
+  var quotes ="";
   var random = getRandomQuote(quotes);
   var message ="";
 
@@ -92,7 +92,7 @@ document.getElementById('quote-box').innerHTML = message;
 }
       
  
-// printQuote();
+printQuote();
 
 
 // /***
