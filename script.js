@@ -17,10 +17,10 @@ FSJS project 1 - A Random Quote Generator
 ***/
 var quotes = [
 {
-  quote: 'The stuff that dreams are made of.',
-  source: 'The Maltese Falcon',
-  citation: "Movie the Maltese Falcon",
-  year: '1941'
+  quote: 'Theres no point living, if you cant feel alive.',
+  source: 'Elektra King',
+  citation: 'World is Not Enough',
+  year: '1999'
 },
 
 {
@@ -69,7 +69,7 @@ function getRandomQuote(array)
 // ***/
 function printQuote()
 {
-  var quotes ="";
+  
   var random = getRandomQuote(quotes);
   var message ="";
 
@@ -92,7 +92,7 @@ document.getElementById('quote-box').innerHTML = message;
 }
       
  
-printQuote();
+
 
 
 // /***
@@ -102,4 +102,4 @@ printQuote();
 //   comment.
 // ***/
 
-document.getElementById('loadQuote').addEventListener("click",function() { printQuote(quoteLibrary)},false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
