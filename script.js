@@ -24,7 +24,7 @@ var quotes = [
 },
 
 {
-  quote: 'Everybody has plans until they get hit',
+  quote: 'Everybody has a plans until they get hit',
   source: 'Mike Tyson ',
   year: '1987'
 },
@@ -40,10 +40,10 @@ var quotes = [
   year: '1996'
 },
 {
-  quote: 'The stuff that dreams are made of',
-  source: 'The Maltese Falcon ',
-  citation: 'Movie the Maltese Falcon',
-  year: '1941'
+  quote: 'Do or do not. There is no try',
+  source: 'Yoda ',
+  citation: 'Star Wars',
+  year: '1977'
 },
 ]
 /***
@@ -79,18 +79,22 @@ function printQuote()
   var random = getRandomQuote(quotes);
   var message ="";
 
+  if( random['quote'] )
+  {
+    message += '<p class="quote">' + random['quote'] + '</p>';    
+};
   if( random['source'] )
   {
-    message += '<p class="source">' + random['source'] + '</p>';    
+    message += '<p class="source">' + random['source'];    
 };
   if( random['citation'] )
   {
-    message += '<p class="citation">' + random['citation'] + '</p>';    
+    message += '<span class="citation">' + random['citation'] + '</span>';    
 };
 
 if( random['year'] )
 {
-    message += '<p class="year">' +random['year'] + '</p>';
+    message += '<span class="year">' +random['year'] + '</span>';
 };
 message += '</p>';
 
