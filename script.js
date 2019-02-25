@@ -17,14 +17,14 @@ FSJS project 1 - A Random Quote Generator
 ***/
 var quotes = [
 {
-  quote: 'Theres no point living, if you cant feel alive.',
+  quote:'Theres no point living, if you cant feel alive.',
   source: 'Elektra King',
   citation: 'World is Not Enough',
   year: '1999'
 },
 
 {
-  quote: 'Everybody has plans until they get hit.',
+  quote: 'Everybody has plans until they get hit',
   source: 'Mike Tyson ',
   year: '1987'
 },
@@ -38,6 +38,12 @@ var quotes = [
   source: 'Jerry Maguire ',
   citation: 'Movie',
   year: '1996'
+},
+{
+  quote: 'The stuff that dreams are made of',
+  source: 'The Maltese Falcon ',
+  citation: 'Movie the Maltese Falcon',
+  year: '1941'
 },
 ]
 /***
